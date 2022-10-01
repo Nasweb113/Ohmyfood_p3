@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0px 3px 0.5px lightgrey;
+  padding: 0.3rem;
+  position: relative;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid red;
+  gap: 1rem;
+}
+.city i {
+  font-size: 1.5rem;
+}
+
+/* EXPLORER*/
+.explorer {
+  text-align: center;
+  /*CSS GRADIENT*/
+}
+.explorer h2 {
+  margin-top: 2rem;
+  font-size: 30px;
+}
+.explorer p {
+  font-size: 16px;
+}
+.explorer button {
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  color: white;
+  font-size: 25px;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  /*box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);*/
+  transition: 300ms;
+  margin-top: 1rem;
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
+}
+.explorer button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.howitworks ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .howitworks ol {
+    flex-direction: column;
+  }
+}
+.howitworks li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  border: 1px solid red;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
+}
+.howitworks li:hover {
+  transform: scale(1.02);
+}/*# sourceMappingURL=style.css.map */

@@ -116,17 +116,36 @@ main {
 }
 
 .menu {
+  background-color: #f6f6f6;
+}
+.menu h2 {
+  margin-bottom: 2rem;
+}
+.menu .menu__cards {
   display: grid;
-  border: 1px solid blue;
   grid-gap: 3rem;
   grid-template-columns: repeat(2, 1fr);
 }
 @media screen and (max-width: 768px) {
-  .menu {
+  .menu .menu__cards {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
   }
 }
-.menu card {
+.menu .card {
   border: 1px solid red;
+  height: 300px;
+}
+.menu .card img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .menu .card {
+    grid-template-columns: repeat(1, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

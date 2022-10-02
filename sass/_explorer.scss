@@ -1,4 +1,6 @@
 @use "_tools/_shadow" as shad;
+@use "_tools/_gradient";
+
 
 /* EXPLORER*/
 .explorer {
@@ -17,7 +19,7 @@
 
     /*CSS GRADIENT*/
     & button {
-        background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+        @include gradient.gradient;
         color: white;
         font-size: 25px;
         padding: 1rem 2rem;

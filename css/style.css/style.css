@@ -38,10 +38,9 @@ main h3, main p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #7e7e7e;
+  background-color: #f6f6f6;
   text-align: center;
   padding: 0.5rem;
-  border: 1px solid red;
   gap: 1rem;
   width: 100%;
 }
@@ -127,13 +126,14 @@ main h3, main p {
 
 .menu {
   background-color: #f6f6f6;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .menu .menu__cards {
+  margin: 0 1rem;
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(2, 1fr);
-  /*sudo-elements creating the NEW box in CSS only*/
+  /*using sudo-elements creating the NEW box in CSS only*/
 }
 @media screen and (max-width: 768px) {
   .menu .menu__cards {
@@ -142,7 +142,6 @@ main h3, main p {
   }
 }
 .menu .menu__cards .new {
-  border: 1px solid red;
   position: relative;
 }
 .menu .menu__cards .new::before {
@@ -162,6 +161,8 @@ main h3, main p {
 .card {
   height: 300px;
   border-radius: 3rem;
+  background-color: white;
+  cursor: pointer;
 }
 .card img {
   height: 200px;
@@ -180,8 +181,18 @@ main h3, main p {
 .card__description {
   position: relative;
 }
+.card__description .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.card__description:hover .fa-solid {
+  opacity: 1;
+}
 .card__description h3 {
-  margin: 0.5;
   padding-top: 0.5rem;
 }
 .card__description i {
@@ -192,6 +203,16 @@ main h3, main p {
   transform: translateY(-50%);
 }
 
-.footer {
+footer {
   background-color: #1d2022;
+  padding: 0 2rem;
+  color: white;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+footer h2 {
+  font-family: "Shrikhand", "sans serif";
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem;
 }/*# sourceMappingURL=style.css.map */

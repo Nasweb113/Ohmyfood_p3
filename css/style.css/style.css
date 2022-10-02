@@ -20,7 +20,7 @@ body {
 }
 
 main {
-  padding: 0 1rem;
+  padding: 0rem;
 }
 
 .city {
@@ -32,6 +32,7 @@ main {
   padding: 0.5rem;
   border: 1px solid red;
   gap: 1rem;
+  width: 100%;
 }
 .city i {
   font-size: 1.5rem;
@@ -66,10 +67,13 @@ main {
   opacity: 0.9;
 }
 
+.howitworks {
+  margin: 10px;
+}
 .howitworks ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
+  counter-reset: section;
 }
 @media (max-width: 768px) {
   .howitworks ol {
@@ -77,13 +81,52 @@ main {
   }
 }
 .howitworks li {
+  font-weight: bold;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
-  border: 1px solid red;
   flex-grow: 1;
-  border-radius: 1rem;
+  border-radius: 10px;
+  padding: 15px 30px;
+  box-shadow: 0px 4px 6px 6px rgba(0, 0, 0, 0.12);
+  list-style-type: none;
+  /*needed for :before position:absolute to work below*/
+  position: relative;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
+}
+.howitworks li::before {
+  counter-increment: section;
+  content: counter(section);
+  color: white;
+  background-color: #9356dc;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -13px;
+  top: 12px;
 }
 .howitworks li:hover {
   transform: scale(1.02);
+}
+.howitworks i {
+  margin-right: 1rem;
+  color: blue;
+}
+
+.menu {
+  display: grid;
+  border: 1px solid blue;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+.menu card {
+  border: 1px solid red;
 }/*# sourceMappingURL=style.css.map */

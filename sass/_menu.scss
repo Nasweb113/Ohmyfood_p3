@@ -1,42 +1,82 @@
+@use "_tools/colors";
+
+
+
 .menu {
+
     background-color: #f6f6f6;
-    h2 {
-        margin-bottom: 2rem;
-    }
+    margin-bottom: 2rem;
+    
     .menu__cards {
         display: grid;
         grid-gap: 3rem;
         grid-template-columns: repeat(2, 1fr);
-        
-    
         @media screen and (max-width: 768px) {
             grid-template-columns: repeat(1, 1fr);
             /*grid-template-rows: repeat(4, 1fr);*/
-        }  
+        } 
+        /*sudo-elements creating the NEW box in CSS only*/
+        .new {
+            border: 1px solid red;
+            position: relative;
+        }
+            .new::before {
+                content: "New";
+                position: absolute;
+                height: 2rem;
+                width: 6rem;
+                background-color: colors.$green;
+                color: darken($color: colors.$green, $amount: 50);
+                /*found in SASS notes how to do the above*/
+                display: grid; 
+                place-items: center;
+                right: 1rem;
+                top: 1rem;
+
+
+            }
+            
+        } 
+    
+        
+        
     }
 
 
     
     .card {
-        border: 1px solid red;
+        
         height: 300px;
+        border-radius: 3rem;
         
     img {
      height: 200px;
      width: 100%;
      object-fit: cover;
+     border-radius: 3rem 3rem 0 0;
 
-    }
-    
-    .card__image {
-      
-         
     }
     @media screen and (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
         /*grid-template-rows: repeat(4, 1fr);*/
         width: 100%;
     }
+    &__description {
+        
+        position: relative;
+h3 {
+    margin: 0.5;
+    padding-top: 0.5rem;
 }
+
+i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
 }
+    }
+}
+
     

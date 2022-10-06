@@ -1,0 +1,30 @@
+@use "../_tools/gradient";
+@use "../_tools/mixin";
+
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+     
+}
+img {
+    width: 100%;
+}
+
+h2 {
+    font-family: "shrikhand", "sans-serif";
+    position: relative;
+}
+  
+.resto_header  {
+    border: 1px solid blue;
+    position: relative;
+    
+@include mixin.heart;
+    
+
+
+}

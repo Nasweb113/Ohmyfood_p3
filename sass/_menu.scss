@@ -1,6 +1,6 @@
 @use "_tools/colors";
 @use "_tools/gradient";
-
+@use "_tools/mixin";
 
 .menu {
 
@@ -65,20 +65,15 @@
         /*grid-template-rows: repeat(4, 1fr);*/
         width: 100%;
     }
-    &__description {
-        
+}
+
+    __description {        
         position: relative;
-        .fa-solid {
-            color: transparent;
-            @include gradient.gradient;
-            background-clip: text;
-            -webkit-background-clip: text;
-            opacity: 0;
-            transition: all 200ms ease-in-out;
-        }
-        &:hover .fa-solid{
-            opacity: 1;
-            
+        background-color: white;
+        border-radius: 0 0 1rem 1rem;
+      
+        i{
+        @include mixin.heart;
         }
 h3 {
    
@@ -87,14 +82,8 @@ h3 {
 
 
 
-i {
-    font-size: 30px;
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-}
+
     
    
-}}
+}
     

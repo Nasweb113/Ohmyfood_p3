@@ -1,0 +1,31 @@
+@use "../_tools/gradient";
+
+
+
+@mixin heart {
+    i {
+        position: absolute;
+        transform: translateY(10px);  
+        right: 1rem;
+        font-size: 2rem;
+        top: 0;
+        transform: translate(-50%, 95%);
+        
+        }
+        .far {
+            
+          
+        }
+        }
+    
+    .fas {
+        color: transparent;
+        @include gradient.gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+       opacity: 0;
+        &:hover .fas {
+            opacity: 1;
+        }
+       
+    }

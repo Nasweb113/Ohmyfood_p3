@@ -1,7 +1,7 @@
 @use "_tools/colors";
 @use "_tools/gradient";
 @use "_tools/mixin";
-
+#homepage{
 .menu {
 
     background-color: colors.$lightgrey;
@@ -87,3 +87,4 @@ h3 {
    
 }
     
+}

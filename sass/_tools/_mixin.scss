@@ -12,11 +12,12 @@
         transform: translate(-50%, 95%);
         
         }
-        .far {
-            
+        .far::before {
+            opacity: 1;}
+      
           
-        }
-        }
+        
+        
     
     .fas {
         color: transparent;
@@ -29,3 +30,4 @@
         }
        
     }
+}

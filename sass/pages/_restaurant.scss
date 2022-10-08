@@ -1,30 +1,46 @@
 @use "../_tools/gradient";
 @use "../_tools/mixin";
+@use "../_tools/colors";
 
+#page-resto {
+}
 
-html,body
-{
+.restaurant-pic {
     width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-     
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+    
 }
-img {
-    width: 100%;
-}
-
-h2 {
-    font-family: "shrikhand", "sans-serif";
-    position: relative;
-}
-  
-.resto_header  {
+.resto_main  {
     border: 1px solid blue;
     position: relative;
-    
-@include mixin.heart;
-    
-
-
+    background-color: colors.$lightgrey;
+    margin-top: -30px;
+    border-radius: 2rem 2rem 0 0;
+    padding: 5rem 1rem;
+    @include mixin.heart;
+ 
+ h2 {
+    font-family: "shrikhand", "sans-serif";
+    position: relative;    
+    padding-left: 1rem;
 }
+}
+
+.menu-grid{
+    background-color: colors.$lightgrey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5rem;
+    gap: 1rem;
+    @media (max-width: 768px){
+        grid-template-columns: 1fr;
+        
+    }
+    .menu-category {
+        border: 1px solid red;
+    background-color: white;
+    }
+}
+ 

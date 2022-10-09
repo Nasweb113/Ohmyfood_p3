@@ -1,8 +1,19 @@
 @use "../_tools/gradient";
 @use "../_tools/mixin";
 @use "../_tools/colors";
-
+@use "../_tools/shadow";
+@use "../_tools/animation";
+@keyframes quarterspin {
+    0% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
 #page-resto {
+    background-color: colors.$lightgrey;
+    
 }
 
 .restaurant-pic {
@@ -10,37 +21,90 @@
     height: 60vh;
     object-fit: cover;
     object-position: center;
-    
 }
+
 .resto_main  {
     border: 1px solid blue;
-    position: relative;
     background-color: colors.$lightgrey;
-    margin-top: -30px;
-    border-radius: 2rem 2rem 0 0;
-    padding: 5rem 1rem;
-    @include mixin.heart;
- 
- h2 {
+    
+   
+    
+    
+ & h2 {
     font-family: "shrikhand", "sans-serif";
     position: relative;    
     padding-left: 1rem;
+    background-color: colors.$lightgrey;
+    border-radius: 25px 25px 0 0;
+   margin-top: -30px;
 }
 }
 
-.menu-grid{
+.menu-grid {
     background-color: colors.$lightgrey;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 5rem;
-    gap: 1rem;
-    @media (max-width: 768px){
-        grid-template-columns: 1fr;
-        
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.5rem;
+    width: 100%;
+    
+    
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
     }
     .menu-category {
         border: 1px solid red;
-    background-color: white;
+        font-family: "roboto", "sans-serif";
+       gap: 1rem;
+       
+        
+       h3 {
+        font-weight: bold;
+      }
     }
+    .menu-item {
+        border: 1px solid green;
+        @include shadow.buttonshadow;
+        display: flex;
+        border-radius: 1rem;
+        background: white;
+        
+        
+    
+    .menu-item-description
+    {
+padding: 2rem 1rem;
+
+    }
+    .menu-item-price {
+margin-left: auto;
+font-weight: 900;
+margin-top: 2rem;
+overflow: hidden;
+padding: 2rem;
+
+    
 }
- 
+.menu-item-check {
+background-color: colors.$green;
+margin-right: -4rem;
+width: 5rem;
+border-radius: 0 1rem 1rem 0;
+transition: all 0.5s;
+display: flex;
+i {
+    margin: auto;
+    color: white;
+    font-size:26px;
+}
+}
+&:hover {
+    .menu-item-check {
+    margin-right: 0;
+
+i 
+    {
+    animation:quarterspin 0.5s ease-in-out ;
+    }
+    }
+}}

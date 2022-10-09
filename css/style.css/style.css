@@ -218,10 +218,31 @@ footer h2 {
   font-family: "Shrikhand", "sans serif";
   font-size: 1.5rem;
   font-weight: 500;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 footer a {
   color: white;
+}
+
+@-webkit-keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+#page-resto {
+  background-color: #f6f6f6;
 }
 
 .restaurant-pic {
@@ -235,52 +256,73 @@ footer a {
 
 .resto_main {
   border: 1px solid blue;
-  position: relative;
   background-color: #f6f6f6;
-  margin-top: -30px;
-  border-radius: 2rem 2rem 0 0;
-  padding: 5rem 1rem;
-}
-.resto_main i {
-  position: absolute;
-  transform: translateY(10px);
-  right: 1rem;
-  font-size: 2rem;
-  top: 0;
-  transform: translate(-50%, 95%);
-}
-.resto_main .far::before {
-  opacity: 1;
-}
-.resto_main .fas {
-  color: transparent;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-}
-.resto_main .fas:hover .fas {
-  opacity: 1;
 }
 .resto_main h2 {
   font-family: "shrikhand", "sans-serif";
   position: relative;
   padding-left: 1rem;
+  background-color: #f6f6f6;
+  border-radius: 25px 25px 0 0;
+  margin-top: -30px;
 }
 
 .menu-grid {
   background-color: #f6f6f6;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 5rem;
-  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0.5rem;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .menu-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-.menu-grid .menu-category {
+
+.menu-category {
   border: 1px solid red;
-  background-color: white;
+  font-family: "roboto", "sans-serif";
+  gap: 1rem;
+}
+.menu-category h3 {
+  font-weight: bold;
+}
+
+.menu-item {
+  border: 1px solid green;
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
+  display: flex;
+  border-radius: 1rem;
+  background: white;
+}
+.menu-item .menu-item-description {
+  padding: 2rem 1rem;
+}
+.menu-item .menu-item-price {
+  margin-left: auto;
+  font-weight: 900;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: 2rem;
+}
+.menu-item .menu-item-check {
+  background-color: #99E2D0;
+  margin-right: -4rem;
+  width: 5rem;
+  border-radius: 0 1rem 1rem 0;
+  transition: all 0.5s;
+  display: flex;
+}
+.menu-item .menu-item-check i {
+  margin: auto;
+  color: white;
+  font-size: 26px;
+}
+.menu-item:hover .menu-item-check {
+  margin-right: 0;
+}
+.menu-item:hover .menu-item-check i {
+  -webkit-animation: quarterspin 0.5s ease-in-out;
+          animation: quarterspin 0.5s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

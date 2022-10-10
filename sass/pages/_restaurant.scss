@@ -3,16 +3,17 @@
 @use "../_tools/colors";
 @use "../_tools/shadow";
 @use "../_tools/animation";
-@keyframes quarterspin {
+/*@keyframes quarterspin {
     0% {
         transform: rotate(-270deg);
     }
     100% {
         transform: rotate(0);
     }
-}
+}*/
 #page-resto {
     background-color: colors.$lightgrey;
+    
     
 }
 
@@ -56,7 +57,8 @@
         border: 1px solid red;
         font-family: "roboto", "sans-serif";
        gap: 1rem;
-       
+       overflow: hidden;
+       /*flex item not shrinking smaller than its content*/
         
        h3 {
         font-weight: bold;
@@ -68,12 +70,16 @@
         display: flex;
         border-radius: 1rem;
         background: white;
-        
+        overflow: hidden;
+       
         
     
     .menu-item-description
     {
-padding: 2rem 1rem;
+        padding: 2rem 1rem;
+        overflow: hidden;
+        
+
 
     }
     .menu-item-price {
@@ -104,6 +110,7 @@ i {
 
 i 
     {
+        @include animation.quarterspin;
     animation:quarterspin 0.5s ease-in-out ;
     }
     }

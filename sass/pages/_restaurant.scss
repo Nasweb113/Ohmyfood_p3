@@ -56,7 +56,6 @@
     .menu-category {
         border: 1px solid red;
         font-family: "roboto", "sans-serif";
-       gap: 1rem;
        overflow: hidden;
        /*flex item not shrinking smaller than its content*/
         
@@ -68,6 +67,7 @@
         border: 1px solid green;
         @include shadow.buttonshadow;
         display: flex;
+        margin: 1rem 0;
         border-radius: 1rem;
         background: white;
         overflow: hidden;

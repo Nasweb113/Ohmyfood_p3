@@ -274,7 +274,6 @@ footer a {
 .menu-category {
   border: 1px solid red;
   font-family: "roboto", "sans-serif";
-  gap: 1rem;
   overflow: hidden;
   /*flex item not shrinking smaller than its content*/
 }
@@ -286,6 +285,7 @@ footer a {
   border: 1px solid green;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
   display: flex;
+  margin: 1rem 0;
   border-radius: 1rem;
   background: white;
   overflow: hidden;

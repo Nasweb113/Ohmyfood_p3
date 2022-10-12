@@ -1,6 +1,8 @@
 @use "_tools/colors";
 @use "_tools/gradient";
 @use "_tools/mixin";
+
+
 #homepage{
 .menu {
 
@@ -72,9 +74,7 @@
         background-color: white;
         border-radius: 0 0 1rem 1rem;
       
-        i{
-        @include mixin.heart;
-        }
+      
 h3 {
    
     padding-top: 0.5rem;

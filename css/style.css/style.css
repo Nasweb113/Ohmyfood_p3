@@ -91,13 +91,14 @@ main h3, main p {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
+  cursor: pointer;
   /*box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);*/
   transition: 300ms;
   margin-top: 1rem;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
 }
-.explorer button button:hover {
+.explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
@@ -150,11 +151,11 @@ main h3, main p {
   color: blue;
 }
 
-#homepage .menu {
+.menu {
   background-color: #f6f6f6;
   margin-bottom: 1rem;
 }
-#homepage .menu .menu__cards {
+.menu .menu__cards {
   margin: 0 1rem;
   display: grid;
   grid-gap: 3rem;
@@ -162,15 +163,15 @@ main h3, main p {
   /*using sudo-elements creating the NEW box in CSS only*/
 }
 @media screen and (max-width: 768px) {
-  #homepage .menu .menu__cards {
+  .menu .menu__cards {
     grid-template-columns: repeat(1, 1fr);
     /*grid-template-rows: repeat(4, 1fr);*/
   }
 }
-#homepage .menu .menu__cards .new {
+.menu .menu__cards .new {
   position: relative;
 }
-#homepage .menu .menu__cards .new::before {
+.menu .menu__cards .new::before {
   content: "New";
   position: absolute;
   height: 2rem;
@@ -183,13 +184,15 @@ main h3, main p {
   right: 1rem;
   top: 1rem;
 }
-#homepage .card {
+
+.card {
   height: 300px;
   border-radius: 3rem;
   background-color: white;
   cursor: pointer;
+  position: relative;
 }
-#homepage .card img {
+.card img {
   height: 200px;
   width: 100%;
   -o-object-fit: cover;
@@ -197,18 +200,18 @@ main h3, main p {
   border-radius: 3rem 3rem 0 0;
 }
 @media screen and (max-width: 768px) {
-  #homepage .card {
+  .card {
     grid-template-columns: repeat(1, 1fr);
     /*grid-template-rows: repeat(4, 1fr);*/
     width: 100%;
   }
 }
-#homepage __description {
-  position: relative;
+
+__description {
   background-color: white;
   border-radius: 0 0 1rem 1rem;
 }
-#homepage __description h3 {
+__description h3 {
   padding-top: 0.5rem;
 }
 
@@ -223,12 +226,29 @@ footer h2 {
   font-family: "Shrikhand", "sans serif";
   font-size: 1.5rem;
   font-weight: 500;
-  padding: 0.5rem;
+  padding: 0rem;
 }
 footer a {
   color: white;
 }
 
+@-webkit-keyframes fadeInMenus {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInMenus {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*@keyframes quarterspin {
     0% {
         transform: rotate(-270deg);
@@ -252,13 +272,14 @@ footer a {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
+  cursor: pointer;
   /*box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);*/
   transition: 300ms;
   margin-top: 1rem;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
 }
-.order__button button:hover {
+.order__button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
@@ -271,6 +292,14 @@ footer a {
   position: absolute;
   transform: translateY(-55px);
   left: 25px;
+}
+.fa-arrow-left:hover {
+  transform: scale(1.02);
+}
+
+.header_page1 button {
+  border: none;
+  background: none;
 }
 
 .restaurant-pic {
@@ -342,6 +371,10 @@ footer a {
 }
 
 .menu-item {
+  -webkit-animation: fadeInMenus 3s;
+          animation: fadeInMenus 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
   border: 1px solid green;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
   display: flex;
@@ -349,6 +382,19 @@ footer a {
   border-radius: 1rem;
   background: white;
   overflow: hidden;
+  cursor: pointer;
+}
+.menu-item:nth-child(1) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+.menu-item:nth-child(2) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+.menu-item:nth-child(3) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 .menu-item .menu-item-price {
   margin-left: auto;

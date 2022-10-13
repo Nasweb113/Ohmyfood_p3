@@ -3,7 +3,7 @@
 @use "_tools/mixin";
 
 
-#homepage{
+
 .menu {
 
     background-color: colors.$lightgrey;
@@ -53,7 +53,7 @@
         border-radius: 3rem;
         background-color: white;
         cursor: pointer;
-        
+        position:relative;
         
     img {
      height: 200px;
@@ -70,21 +70,17 @@
 }
 
     __description {        
-        position: relative;
+        
         background-color: white;
         border-radius: 0 0 1rem 1rem;
-      
-      
+  
+        
+       
 h3 {
-   
+    
     padding-top: 0.5rem;
-}
-
-
-
-
-    
+}   
    
 }
-    
-}
+ 
+

@@ -67,13 +67,14 @@
         /*grid-template-rows: repeat(4, 1fr);*/
         width: 100%;
     }
-}
+
 
     __description {        
-        
+        position: relative;
         background-color: white;
         border-radius: 0 0 1rem 1rem;
-  
+       
+    }
         
        
 h3 {
@@ -81,6 +82,10 @@ h3 {
     padding-top: 0.5rem;
 }   
    
+}
+.heart-icon {
+    position: absolute;
+    transform: translateY(12rem);
 }
  
 

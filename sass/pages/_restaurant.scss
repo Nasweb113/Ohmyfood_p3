@@ -58,13 +58,10 @@
 }
 
 .resto_main  {
-    border: 1px solid blue;
     background-color: colors.$lightgrey;
     position: relative;
-    .heartbutton {
-        @include mixin.heart;
-       }
-   
+    
+  
     
     
  & h2 {
@@ -90,9 +87,7 @@
     }
     }
     .menu-category {
-        
-        
-        border: 1px solid red;
+
         font-family: "roboto", "sans-serif";
        overflow: hidden;
        cursor: pointer;
@@ -114,15 +109,21 @@
             position: absolute;
       }
     }
+   
     
 }
+.heart {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    }
     .menu-item {
-        @for $i from 1 through 3 {
+        @for $i from 1 through 9 {
             &:nth-child(#{$i}) {
-                animation-delay: 100ms *$i;
+                animation-delay: 100ms * $i;
             }
             }
-        animation: fadeInMenus 3s;
+        animation: fadeInMenus 1s;
         animation-fill-mode: both;
         border: 1px solid green;
         @include shadow.buttonshadow;

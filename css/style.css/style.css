@@ -7,6 +7,10 @@ header {
   padding: 0.3rem;
   position: relative;
 }
+header h1, header a {
+  color: black;
+  text-decoration: none;
+}
 
 *,
 ::before,
@@ -53,6 +57,7 @@ main h3, main p {
   position: absolute;
   right: 3.5rem;
   top: 0.5rem;
+  color: lightgrey;
 }
 
 .fa-regular:hover {
@@ -88,7 +93,7 @@ main h3, main p {
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
   color: white;
   font-size: 25px;
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   border: none;
   border-radius: 2rem;
   cursor: pointer;
@@ -186,6 +191,9 @@ main h3, main p {
 .menu {
   background-color: #f6f6f6;
   margin-bottom: 1rem;
+}
+.menu h2 {
+  margin-left: 1rem;
 }
 .menu .menu__cards {
   margin: 0 1rem;
@@ -326,7 +334,7 @@ footer a {
 .order__button {
   color: white;
   font-size: 25px;
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   border: none;
   border-radius: 2rem;
   cursor: pointer;
@@ -347,11 +355,12 @@ footer a {
 
 .fa-arrow-left {
   position: absolute;
-  transform: translateY(-55px);
+  transform: translateY(-75px);
   left: 25px;
+  color: lightgrey;
 }
 .fa-arrow-left:hover {
-  transform: scale(1.02);
+  color: black;
 }
 
 .header_page1 button {
@@ -376,6 +385,7 @@ footer a {
 .resto_main {
   background-color: #f6f6f6;
   position: relative;
+  margin-top: -30px;
 }
 .resto_main h2 {
   font-family: "shrikhand", "sans-serif";
@@ -383,7 +393,6 @@ footer a {
   padding-left: 1rem;
   background-color: #f6f6f6;
   border-radius: 25px 25px 0 0;
-  margin-top: -30px;
 }
 
 .menu-grid {
@@ -405,6 +414,10 @@ footer a {
   cursor: pointer;
   position: relative;
   /*flex item not shrinking smaller than its content*/
+  overflow: hidden;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-category h3 {
   font-weight: bold;
@@ -430,7 +443,6 @@ footer a {
           animation: fadeInMenus 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  border: 1px solid green;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
   display: flex;
   margin: 1rem 0;
@@ -486,6 +498,11 @@ footer a {
   padding: 2rem 1rem;
   overflow: hidden;
 }
+.menu-item .menu-item-description h3, .menu-item .menu-item-description p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .menu-item .menu-item-check {
   background-color: #99E2D0;
   margin-right: -4rem;
@@ -493,6 +510,7 @@ footer a {
   border-radius: 0 1rem 1rem 0;
   transition: all 0.5s;
   display: flex;
+  flex-shrink: 0;
 }
 .menu-item:hover .menu-item-check {
   margin-right: 0;

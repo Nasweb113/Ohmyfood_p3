@@ -31,10 +31,11 @@
 
 .fa-arrow-left {
     position: absolute;
-    transform: translateY(-55px);
+    transform: translateY(-75px);
     left: 25px;
+    color: lightgrey;
     &:hover{
-        @include zoom.zoom;
+        color:black;
     }
     
     
@@ -60,6 +61,7 @@
 .resto_main  {
     background-color: colors.$lightgrey;
     position: relative;
+    margin-top: -30px;
     
   
     
@@ -69,8 +71,8 @@
     position: relative;    
     padding-left: 1rem;
     background-color: colors.$lightgrey;
+   
     border-radius: 25px 25px 0 0;
-   margin-top: -30px;
 }
 }
 
@@ -93,11 +95,15 @@
        cursor: pointer;
        position: relative;
        /*flex item not shrinking smaller than its content*/
-       
+       overflow: hidden;
+       overflow: hidden;
+       white-space: nowrap;
+       text-overflow: ellipsis;
        h3 {
         font-weight: bold;
         
-      }
+        }
+      
       h2 {
         &::after {
             content: "";
@@ -109,9 +115,9 @@
             position: absolute;
       }
     }
-   
-    
 }
+    
+
 .heart {
     position: absolute;
     top: 2rem;
@@ -125,7 +131,6 @@
             }
         animation: fadeInMenus 1s;
         animation-fill-mode: both;
-        border: 1px solid green;
         @include shadow.buttonshadow;
         display: flex;
         margin: 1rem 0;
@@ -149,8 +154,12 @@
     {
         padding: 2rem 1rem;
         overflow: hidden;
-        
-    
+      
+        h3, p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
 }
 .menu-item-check {
     background-color: colors.$green;
@@ -159,6 +168,8 @@
     border-radius: 0 1rem 1rem 0;
     transition: all 0.5s;
     display: flex;
+    //need shrink to stop check box disappearing//
+    flex-shrink: 0;
     }
     &:hover .menu-item-check {
         margin-right: 0;

@@ -63,10 +63,11 @@ main h3, main p {
 .fa-regular:hover {
   content: "";
   font-weight: bold;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #d76cdb;
-  -webkit-animation-duration: 3000ms;
-  animation-duration: 3000ms;
+  -webkit-animation-duration: 5000ms;
+  animation-duration: 5000ms;
 }
 
 .fas {
@@ -77,7 +78,7 @@ main h3, main p {
   font-size: 2rem;
 }
 
-/* EXPLORER*/
+/* EXPLORER - BOOK THE MENU YOU LIKE SECTION**/
 .explorer {
   text-align: center;
   /*CSS GRADIENT*/
@@ -118,8 +119,8 @@ main h3, main p {
   height: 100vh;
   z-index: 1;
   opacity: 0.5;
-  -webkit-animation: disappear 2s forwards;
-          animation: disappear 2s forwards;
+  -webkit-animation: disappear 2.5s forwards;
+          animation: disappear 2.5s forwards;
 }
 
 @-webkit-keyframes disappear {
@@ -277,6 +278,7 @@ footer a {
 }
 
 /*changed from scale*/
+/** Us @keyframes and set the steps in which the animation occurs by setting offsets % **/
 @-webkit-keyframes fadeInMenus {
   0% {
     transform: translateY(50%);
@@ -435,8 +437,8 @@ footer a {
 }
 
 .menu-item {
-  -webkit-animation: fadeInMenus 1s;
-          animation: fadeInMenus 1s;
+  -webkit-animation: fadeInMenus 2.5s;
+          animation: fadeInMenus 2.5s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
@@ -448,40 +450,40 @@ footer a {
   cursor: pointer;
 }
 .menu-item:nth-child(1) {
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 .menu-item:nth-child(2) {
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 .menu-item:nth-child(3) {
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
 }
 .menu-item:nth-child(4) {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
 }
 .menu-item:nth-child(5) {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
 }
 .menu-item:nth-child(6) {
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
 }
 .menu-item:nth-child(7) {
-  -webkit-animation-delay: 700ms;
-          animation-delay: 700ms;
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
 }
 .menu-item:nth-child(8) {
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
+  -webkit-animation-delay: 16s;
+          animation-delay: 16s;
 }
 .menu-item:nth-child(9) {
-  -webkit-animation-delay: 900ms;
-          animation-delay: 900ms;
+  -webkit-animation-delay: 18s;
+          animation-delay: 18s;
 }
 .menu-item .menu-item-price {
   margin-left: auto;

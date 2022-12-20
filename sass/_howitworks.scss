@@ -1,7 +1,7 @@
 @use "_tools/_shadow" as shad;
 @use "_tools/_zoom" as zoom;
 
-
+//**THE "HOW IT WORKS SECTION"
 
 
 
@@ -28,14 +28,14 @@
     
         /*needed for :before position:absolute to work below*/
         position: relative;
-    
+    //** using CSS element counters to add numbers to the list items**//
         &::before {
             counter-increment: section;
             content: counter(section);
             color: white;
             background-color: #9356dc;
-              width: 25px;
-              height: 25px;
+            width: 25px;
+            height: 25px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -48,10 +48,12 @@
         @include shad.buttonshadow;
         &:hover {
         @include zoom.zoom;
+        background-color: #f0e8fa;
+        
         }
     }
 & i {
     margin-right: 1rem;
-    color: blue;
+    color:#9356dc;
 }
 }

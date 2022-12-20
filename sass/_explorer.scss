@@ -1,8 +1,8 @@
 @use "_tools/_shadow";
 @use "_tools/_gradient";
 @use "_tools/mixin";
-
-/* EXPLORER*/
+//INCLUDES SCREEN LOADER BELOW
+/* EXPLORER - BOOK THE MENU YOU LIKE SECTION**/
 .explorer {
     text-align: center;
 
@@ -26,17 +26,18 @@
 
    
 }
+//**SCREEN LOADER**//
 .loader {
     display: grid;
     place-items: center;
     color: purple;
     position: fixed;
+    inset: 0;
     background-color: #fff;
     height: 100vh;
-    inset: 0;
     z-index: 1;
     opacity: 0.5;
-    animation: disappear 2s forwards;
+    animation: disappear 2.5s forwards;
     
     
   }

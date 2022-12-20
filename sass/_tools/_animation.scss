@@ -1,3 +1,5 @@
+//**rotation of ticks on menuusing the transfor ROTATE element**//
+
 @mixin quarterspin {
     @keyframes quarterspin {
         0% {
@@ -8,8 +10,9 @@
         }
     }
 }
-
+//***getting the fade in for the menus**//
 /*changed from scale*/
+/** Us @keyframes and set the steps in which the animation occurs by setting offsets % **/
 @keyframes fadeInMenus {
     0% {
      

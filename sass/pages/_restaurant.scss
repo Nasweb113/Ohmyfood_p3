@@ -5,6 +5,8 @@
 @use "../_tools/animation";
 @use "../_tools/zoom";
 
+
+//**ELLIPSIS and MENU CHECK ALSO TRANSITION****//
 #page-resto {
     background-color: colors.$lightgrey;
     section.order {
@@ -87,6 +89,7 @@
         width: 100%;
     }
     }
+    //****ELLIPSIS ADDED****//
     .menu-category {
 
         font-family: "roboto", "sans-serif";
@@ -125,10 +128,10 @@
     .menu-item {
         @for $i from 1 through 9 {
             &:nth-child(#{$i}) {
-                animation-delay: 100ms * $i;
+                animation-delay: 2s * $i;
             }
             }
-        animation: fadeInMenus 1s;
+        animation: fadeInMenus 2.5s;
         animation-fill-mode: both;
         @include shadow.buttonshadow;
         display: flex;
@@ -153,13 +156,14 @@
     {
         padding: 2rem 1rem;
         overflow: hidden;
-      
+      //*************ADDED ELIPSIS************//
         h3, p {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
         }
 }
+//***TICK ON MENU ITEM****//
 .menu-item-check {
     background-color: colors.$green;
     margin-right: -4rem;

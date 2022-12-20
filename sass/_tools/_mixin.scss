@@ -17,6 +17,7 @@
     &:hover {
         transform: scale(1.02);
         opacity: 0.9;
+        
     }
     }
   
@@ -42,11 +43,11 @@
     content: "";
     font-weight: bold;
     
-    
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: #d76cdb;
-    -webkit-animation-duration: 3000ms;
-            animation-duration: 3000ms;
+    -webkit-animation-duration: 5000ms;
+            animation-duration: 5000ms;
   }
  
   .fas {

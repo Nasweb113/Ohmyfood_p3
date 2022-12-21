@@ -7,6 +7,7 @@
 
 //**MOST TRANSITIONS ETC AND HEART IS HERE**//
 //**ELLIPSIS and MENU CHECK ALSO TRANSITION****//
+//**MENU DELAY BELOW**//
 #page-resto {
     background-color: colors.$lightgrey;
     section.order {
@@ -125,6 +126,7 @@
     top: 2rem;
     right: 2rem;
     }
+    //using a sass FOR loop to add animation delay to each menu item https://sass-lang.com/documentation/at-rules/control/for//
     .menu-item {
         @for $i from 1 through 9 {
             &:nth-child(#{$i}) {

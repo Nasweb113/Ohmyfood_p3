@@ -202,7 +202,7 @@ main h3, main p {
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(2, 1fr);
-  /*using sudo-elements creating the NEW box in CSS only*/
+  /*using pseudo-elements creating the NEW box in CSS only*/
 }
 @media screen and (max-width: 768px) {
   .menu .menu__cards {

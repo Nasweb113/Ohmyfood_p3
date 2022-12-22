@@ -1,0 +1,52 @@
+@use "_tools/_shadow";
+@use "_tools/_gradient";
+@use "_tools/mixin";
+//INCLUDES SCREEN LOADER BELOW
+/* EXPLORER - BOOK THE MENU YOU LIKE SECTION**/
+.explorer {
+    text-align: center;
+
+    & h2 {
+        
+        font-size: 30px;
+    }
+
+    & p {
+        font-size: 16px;
+    }
+
+
+
+    /*CSS GRADIENT*/
+    & button {
+        @include gradient.gradient;
+        @include shadow.buttonshadow;
+        @include mixin.base-button;
+    }
+
+   
+}
+//**SCREEN LOADER**//
+.loader {
+    display: grid;
+    place-items: center;
+    color: purple;
+    position: fixed;
+    inset: 0;
+    background-color: #fff;
+    height: 100vh;
+    z-index: 1;
+    opacity: 0.5;
+    animation: disappear 2.5s forwards;
+    
+    
+  }
+  @keyframes disappear {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+  }
+  

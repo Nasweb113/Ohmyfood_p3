@@ -1,0 +1,16 @@
+@use "_tools/colors";
+//** THE PARIS BELLEVILLE SECTION**//
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: colors.$lightgrey;
+    text-align: center;
+    padding: 0.5rem;
+    gap: 1rem;
+    width: 100%;
+
+    & i {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0px 3px 0.5px lightgrey;
+  padding: 0.3rem;
+  position: relative;
+}
+header h1, header a {
+  color: black;
+  text-decoration: none;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 0rem;
+}
+main h2 {
+  padding: 2rem 0;
+  margin: 0;
+}
+main a {
+  text-decoration: none;
+  color: inherit;
+}
+main h3, main p {
+  margin: 0;
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 0.5rem;
+  gap: 1rem;
+  width: 100%;
+}
+.city i {
+  font-size: 1.5rem;
+}
+
+.heart {
+  font-size: 25px;
+  position: absolute;
+  right: 3.5rem;
+  top: 0.5rem;
+  color: lightgrey;
+}
+
+.fa-regular:hover {
+  content: "";
+  font-weight: bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #d76cdb;
+  -webkit-animation-duration: 5000ms;
+  animation-duration: 5000ms;
+}
+
+.fas {
+  opacity: 0;
+}
+.fas .fas:hover {
+  opacity: 1;
+  font-size: 2rem;
+}
+
+/* EXPLORER - BOOK THE MENU YOU LIKE SECTION**/
+.explorer {
+  text-align: center;
+  /*CSS GRADIENT*/
+}
+.explorer h2 {
+  font-size: 30px;
+}
+.explorer p {
+  font-size: 16px;
+}
+.explorer button {
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
+  color: white;
+  font-size: 25px;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  /*box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);*/
+  transition: 300ms;
+  margin-top: 1rem;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
+}
+.explorer button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.loader {
+  display: grid;
+  place-items: center;
+  color: purple;
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0.5;
+  -webkit-animation: disappear 2.5s forwards;
+          animation: disappear 2.5s forwards;
+}
+
+@-webkit-keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+.howitworks {
+  margin: 10px;
+}
+.howitworks ol {
+  display: flex;
+  gap: 2rem;
+  counter-reset: section;
+}
+@media (max-width: 768px) {
+  .howitworks ol {
+    flex-direction: column;
+  }
+}
+.howitworks li {
+  font-weight: bold;
+  background-color: #f6f6f6;
+  flex-grow: 1;
+  border-radius: 10px;
+  padding: 15px 30px;
+  box-shadow: 0px 4px 6px 6px rgba(0, 0, 0, 0.12);
+  list-style-type: none;
+  /*needed for :before position:absolute to work below*/
+  position: relative;
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
+}
+.howitworks li::before {
+  counter-increment: section;
+  content: counter(section);
+  color: white;
+  background-color: #9356dc;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -13px;
+  top: 12px;
+}
+.howitworks li:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 9px 2px rgba(0, 0, 0, 0.38);
+  background-color: #f0e8fa;
+}
+.howitworks i {
+  margin-right: 1rem;
+  color: #9356dc;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  margin-bottom: 1rem;
+}
+.menu h2 {
+  margin-left: 1rem;
+}
+.menu .menu__cards {
+  margin: 0 1rem;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  /*using pseudo-elements creating the NEW box in CSS only*/
+}
+@media screen and (max-width: 768px) {
+  .menu .menu__cards {
+    grid-template-columns: repeat(1, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+  }
+}
+.menu .menu__cards .new {
+  position: relative;
+}
+.menu .menu__cards .new::before {
+  content: "New";
+  position: absolute;
+  height: 2rem;
+  width: 6rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  /*found in SASS notes how to do the above*/
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+
+.card {
+  height: 300px;
+  border-radius: 3rem;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+}
+.card img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3rem 3rem 0 0;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    grid-template-columns: repeat(1, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
+    width: 100%;
+  }
+}
+.card __description {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.card h3 {
+  padding-top: 0.5rem;
+}
+
+.heart-icon {
+  position: absolute;
+  transform: translateY(12rem);
+}
+
+footer {
+  background-color: #1d2022;
+  padding: 0 2rem;
+  color: white;
+  padding: 1rem;
+}
+footer h2 {
+  font-family: "Shrikhand", "sans serif";
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0rem;
+}
+footer a {
+  color: white;
+}
+
+/*changed from scale*/
+/** Us @keyframes and set the steps in which the animation occurs by setting offsets % **/
+@-webkit-keyframes fadeInMenus {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInMenus {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#page-resto {
+  background-color: #f6f6f6;
+}
+#page-resto section.order {
+  height: 30vh;
+  display: grid;
+  place-items: center;
+}
+
+.order__button {
+  color: white;
+  font-size: 25px;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  /*box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);*/
+  transition: 300ms;
+  margin-top: 1rem;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
+}
+.order__button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.order div {
+  padding: 1rem 4rem;
+}
+
+#page-nav {
+  position: relative;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  transform: translateY(-75px);
+  left: 25px;
+  color: lightgrey;
+}
+.fa-arrow-left:hover {
+  color: black;
+}
+
+.header_page1 button {
+  border: none;
+  background: none;
+}
+
+.restaurant-pic {
+  width: 100%;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media screen and (max-width: 768px) {
+  .restaurant-pic {
+    height: 30%;
+  }
+}
+
+.resto_main {
+  position: relative;
+  margin-top: -30px;
+}
+.resto_main h2 {
+  font-family: "shrikhand", "sans-serif";
+  position: relative;
+  padding-left: 1rem;
+  background-color: #f6f6f6;
+  border-radius: 25px 25px 0 0;
+}
+
+.menu-grid {
+  background-color: #f6f6f6;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0.5rem;
+  width: 70%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+}
+
+.menu-category {
+  font-family: "roboto", "sans-serif";
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  /*flex item not shrinking smaller than its content*/
+  overflow: hidden;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-category h3 {
+  font-weight: bold;
+}
+.menu-category h2::after {
+  content: "";
+  height: 0.25rem;
+  width: 3.75rem;
+  top: 4rem;
+  left: 0;
+  background-color: #99E2D0;
+  position: absolute;
+}
+
+.heart {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.menu-item {
+  -webkit-animation: fadeInMenus 0.5s;
+          animation: fadeInMenus 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.38);
+  display: flex;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  background: white;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu-item:nth-child(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.menu-item:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.menu-item:nth-child(3) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.menu-item:nth-child(4) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.menu-item:nth-child(5) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.menu-item:nth-child(6) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.menu-item:nth-child(7) {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+.menu-item:nth-child(8) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.menu-item:nth-child(9) {
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+.menu-item .menu-item-price {
+  margin-left: auto;
+  font-weight: 900;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: 2rem;
+}
+.menu-item .menu-item-description {
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+.menu-item .menu-item-description h3, .menu-item .menu-item-description p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-item .menu-item-check {
+  background-color: #99E2D0;
+  margin-right: -5rem;
+  width: 5rem;
+  border-radius: 0 1rem 1rem 0;
+  transition: all 0.5s;
+  display: flex;
+  flex-shrink: 0;
+}
+.menu-item:hover .menu-item-check {
+  margin-right: 0;
+}
+.menu-item:hover .menu-item-check i {
+  -webkit-animation: quarterspin 0.5s ease-in-out;
+          animation: quarterspin 0.5s ease-in-out;
+}
+@-webkit-keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.menu-item i {
+  margin: auto;
+  color: white;
+  font-size: 26px;
+}/*# sourceMappingURL=style.css.map */

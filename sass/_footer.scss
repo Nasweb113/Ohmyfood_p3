@@ -1,0 +1,20 @@
+@use "_tools/colors";
+
+footer {
+    background-color: colors.$footergrey ;
+    padding: 0 2rem;
+    color: white;
+    padding: 1rem;
+    h2 {
+        font-family: "Shrikhand", "sans serif";
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 0rem;
+        
+        
+
+    }
+    a {
+        color: white;
+    }
+}

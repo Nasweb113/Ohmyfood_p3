@@ -1,7 +1,7 @@
 Web Developer Training
 Project 3 Open Classrooms - Ohmyfood!
 Project description
-This project is number 3 of the Front-End Developer course which consists of energizing a web page with CSS animations.
+This project is number 3 of the Web Developer course which consists of energizing a web page with CSS animations.
 
 Specifications
 Functional Specifications
